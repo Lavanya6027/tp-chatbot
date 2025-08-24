@@ -1,0 +1,25 @@
+2025-08-20 10:08:53,723 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-20 10:08:53,723 - __main__ - INFO - Registering document extractors
+2025-08-20 10:08:53,723 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-20 10:08:53,723 - __main__ - INFO - Initializing pipeline components
+2025-08-20 10:08:53,726 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-20 10:08:53,726 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-20 10:08:58,900 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-20 10:08:58,903 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-20 10:08:58,903 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-20 10:08:58,905 - __main__ - INFO - Starting document ingestion from: C:\Users\lavanya.e\Downloads\mydocs
+2025-08-20 10:08:58,908 - __main__ - INFO - Processing document: Domestic Travel Policy.pdf
+2025-08-20 10:08:59,912 - __main__ - INFO - Ingested Domestic Travel Policy.pdf successfully
+2025-08-20 10:08:59,913 - __main__ - INFO - Processing document: Extended Work Hours - Policy.docx
+2025-08-20 10:09:00,100 - __main__ - INFO - Ingested Extended Work Hours - Policy.docx successfully
+2025-08-20 10:09:00,100 - __main__ - INFO - Processing document: Information Security Policy.pdf
+2025-08-20 10:09:00,819 - __main__ - INFO - Ingested Information Security Policy.pdf successfully
+2025-08-20 10:09:00,819 - __main__ - INFO - Processing document: International Travel Policy.pdf
+2025-08-20 10:09:01,696 - __main__ - INFO - Ingested International Travel Policy.pdf successfully
+2025-08-20 10:09:01,696 - __main__ - INFO - Processing document: Sexual Harassment Prevention Policy.pdf
+2025-08-20 10:09:02,185 - __main__ - INFO - Ingested Sexual Harassment Prevention Policy.pdf successfully
+2025-08-20 10:09:02,185 - __main__ - INFO - Document ingestion complete. Success: 5, Skipped: 0
+2025-08-20 10:09:02,229 - __main__ - INFO - Console cleared, starting chat loop
+2025-08-20 10:09:02,229 - __main__ - INFO - Entering chat loop
+2025-08-20 10:09:02,229 - __main__ - INFO - Chat session started: 20250820_100902
+2025-08-20 10:09:24,470 - __main__ - INFO - User query: 'tell me about company's leave policy'

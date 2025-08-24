@@ -1,0 +1,28 @@
+2025-08-19 18:47:29,797 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-19 18:47:29,799 - __main__ - INFO - Registering document extractors
+2025-08-19 18:47:29,799 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-19 18:47:29,799 - __main__ - INFO - Initializing pipeline components
+2025-08-19 18:47:29,802 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-19 18:47:29,802 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:47:35,992 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-19 18:47:35,994 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-19 18:47:35,994 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-19 18:47:35,994 - __main__ - INFO - Starting document ingestion from: C:\Users\lavanya.e\Downloads\mydocs
+2025-08-19 18:47:35,994 - __main__ - INFO - Processing document: Domestic Travel Policy.pdf
+2025-08-19 18:47:40,323 - __main__ - INFO - Ingested Domestic Travel Policy.pdf successfully
+2025-08-19 18:47:40,323 - __main__ - INFO - Processing document: Extended Work Hours - Policy.docx
+2025-08-19 18:47:40,445 - __main__ - INFO - Ingested Extended Work Hours - Policy.docx successfully
+2025-08-19 18:47:40,461 - __main__ - INFO - Processing document: Information Security Policy.pdf
+2025-08-19 18:47:41,131 - __main__ - INFO - Ingested Information Security Policy.pdf successfully
+2025-08-19 18:47:41,131 - __main__ - INFO - Processing document: International Travel Policy.pdf
+2025-08-19 18:47:42,121 - __main__ - INFO - Ingested International Travel Policy.pdf successfully
+2025-08-19 18:47:42,123 - __main__ - INFO - Processing document: Sexual Harassment Prevention Policy.pdf
+2025-08-19 18:47:42,667 - __main__ - INFO - Ingested Sexual Harassment Prevention Policy.pdf successfully
+2025-08-19 18:47:42,670 - __main__ - INFO - Document ingestion complete. Success: 5, Skipped: 0
+2025-08-19 18:47:42,735 - __main__ - INFO - Console cleared, starting chat loop
+2025-08-19 18:47:42,735 - __main__ - INFO - Entering chat loop
+2025-08-19 18:47:42,735 - __main__ - INFO - Chat session started: 20250819_184742
+2025-08-19 18:48:28,758 - __main__ - INFO - User query: 'leave policy'
+2025-08-19 18:54:44,518 - __main__ - INFO - Generated response length: 932 characters
+2025-08-19 18:58:06,774 - __main__ - INFO - User query: 'can i create junk files and folder'
+2025-08-19 19:03:37,596 - __main__ - INFO - Generated response length: 254 characters

@@ -1,0 +1,7 @@
+2025-08-21 18:00:30,499 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-21 18:00:30,499 - __main__ - INFO - Registering document extractors
+2025-08-21 18:00:30,499 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-21 18:00:30,499 - __main__ - INFO - Initializing pipeline components
+2025-08-21 18:00:30,505 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-21 18:00:30,505 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-21 18:00:46,145 - __main__ - ERROR - Failed to initialize RAG components: name 'genai' is not defined

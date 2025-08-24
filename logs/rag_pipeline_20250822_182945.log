@@ -1,0 +1,71 @@
+2025-08-22 18:29:45,135 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-22 18:29:45,135 - __main__ - INFO - Registering document extractors
+2025-08-22 18:29:45,135 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-22 18:29:45,135 - __main__ - INFO - Initializing pipeline components
+2025-08-22 18:29:45,146 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-22 18:29:45,146 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-22 18:29:49,881 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-22 18:29:49,881 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-22 18:29:49,881 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-22 18:29:49,881 - __main__ - INFO - Starting document ingestion from: C:\Users\lavanya.e\Downloads\mydocs
+2025-08-22 18:29:49,881 - __main__ - INFO - Processing document: Domestic Travel Policy.pdf
+2025-08-22 18:29:49,953 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:29:57,430 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:29:57,450 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:29:57,450 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:01,152 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:01,156 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:01,157 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:19,069 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:19,073 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:19,073 - __main__ - WARNING - Skipped Domestic Travel Policy.pdf: list index out of range
+2025-08-22 18:30:19,073 - __main__ - INFO - Processing document: Extended Work Hours - Policy.docx
+2025-08-22 18:30:19,125 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:22,478 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:22,482 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:22,482 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:34,550 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:34,550 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:34,550 - __main__ - INFO - Generated Q-map for Extended Work Hours - Policy.docx: 1 chunks
+2025-08-22 18:30:34,640 - __main__ - INFO - Ingested Extended Work Hours - Policy.docx successfully
+2025-08-22 18:30:34,641 - __main__ - INFO - Processing document: Information Security Policy.pdf
+2025-08-22 18:30:34,697 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:39,388 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:39,395 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:39,395 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:30:58,527 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:30:58,540 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:30:58,541 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:10,783 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:10,791 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:10,791 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:22,791 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:22,796 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:22,796 - __main__ - WARNING - Skipped Information Security Policy.pdf: list index out of range
+2025-08-22 18:31:22,796 - __main__ - INFO - Processing document: International Travel Policy.pdf
+2025-08-22 18:31:22,862 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:27,119 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:27,122 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:27,123 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:33,429 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:33,437 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:33,437 - __main__ - INFO - Generated Q-map for International Travel Policy.pdf: 1 chunks
+2025-08-22 18:31:34,367 - __main__ - INFO - Ingested International Travel Policy.pdf successfully
+2025-08-22 18:31:34,367 - __main__ - INFO - Processing document: Sexual Harassment Prevention Policy.pdf
+2025-08-22 18:31:34,421 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:42,093 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:42,100 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:42,102 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:47,922 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:47,926 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:47,927 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-08-22 18:31:55,796 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-08-22 18:31:55,798 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-08-22 18:31:55,798 - __main__ - WARNING - Skipped Sexual Harassment Prevention Policy.pdf: list index out of range
+2025-08-22 18:31:55,800 - __main__ - INFO - Document ingestion complete. Success: 2, Skipped: 3
+2025-08-22 18:31:55,858 - __main__ - INFO - Console cleared, starting chat loop
+2025-08-22 18:31:55,858 - __main__ - INFO - Entering chat loop
+2025-08-22 18:31:55,859 - __main__ - INFO - Chat session started: 20250822_183155
+2025-08-22 18:37:02,898 - __main__ - WARNING - Chat interrupted by user (Ctrl+C)
+2025-08-22 18:37:02,898 - __main__ - INFO - Chat session ended
+2025-08-22 18:37:02,898 - __main__ - INFO - RAG Pipeline shutdown complete

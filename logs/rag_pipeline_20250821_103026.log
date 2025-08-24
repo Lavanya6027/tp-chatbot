@@ -1,0 +1,28 @@
+2025-08-21 10:30:26,565 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-21 10:30:26,565 - __main__ - INFO - Registering document extractors
+2025-08-21 10:30:26,565 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-21 10:30:26,565 - __main__ - INFO - Initializing pipeline components
+2025-08-21 10:30:26,568 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-21 10:30:26,568 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-21 10:30:31,427 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-21 10:30:31,431 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-21 10:30:31,431 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-21 10:30:31,431 - __main__ - INFO - Starting document ingestion from: C:\Users\lavanya.e\Downloads\mydocs
+2025-08-21 10:30:31,438 - __main__ - INFO - Processing document: Domestic Travel Policy.pdf
+2025-08-21 10:30:32,525 - __main__ - INFO - Ingested Domestic Travel Policy.pdf successfully
+2025-08-21 10:30:32,526 - __main__ - INFO - Processing document: Extended Work Hours - Policy.docx
+2025-08-21 10:30:32,680 - __main__ - INFO - Ingested Extended Work Hours - Policy.docx successfully
+2025-08-21 10:30:32,680 - __main__ - INFO - Processing document: Information Security Policy.pdf
+2025-08-21 10:30:33,313 - __main__ - INFO - Ingested Information Security Policy.pdf successfully
+2025-08-21 10:30:33,313 - __main__ - INFO - Processing document: International Travel Policy.pdf
+2025-08-21 10:30:34,351 - __main__ - INFO - Ingested International Travel Policy.pdf successfully
+2025-08-21 10:30:34,351 - __main__ - INFO - Processing document: Sexual Harassment Prevention Policy.pdf
+2025-08-21 10:30:34,926 - __main__ - INFO - Ingested Sexual Harassment Prevention Policy.pdf successfully
+2025-08-21 10:30:34,928 - __main__ - INFO - Document ingestion complete. Success: 5, Skipped: 0
+2025-08-21 10:30:34,972 - __main__ - INFO - Console cleared, starting chat loop
+2025-08-21 10:30:34,972 - __main__ - INFO - Entering chat loop
+2025-08-21 10:30:34,974 - __main__ - INFO - Chat session started: 20250821_103034
+2025-08-21 10:31:13,126 - __main__ - INFO - User query: 'kochi comes under which category for domestic tour?'
+2025-08-21 10:34:37,666 - __main__ - WARNING - Chat interrupted by user (Ctrl+C)
+2025-08-21 10:34:37,700 - __main__ - INFO - Chat session ended
+2025-08-21 10:34:37,700 - __main__ - INFO - RAG Pipeline shutdown complete

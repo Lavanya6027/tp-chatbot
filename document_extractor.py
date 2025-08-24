@@ -69,6 +69,3 @@ class Normalizer:
 def process_document(path: str, normalize: bool = True) -> str:
     raw_text = ExtractorDispatcher.extract(path)
     return Normalizer.normalize(raw_text) if normalize else raw_text
-
-text = process_document(r'C:\Users\shenile.a\Downloads\Exploration-Summary-Visual-Testing-AI-Powered.pdf')
-print(text)

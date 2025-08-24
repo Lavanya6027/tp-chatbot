@@ -1,0 +1,29 @@
+2025-08-20 10:14:13,376 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-20 10:14:13,394 - __main__ - INFO - Registering document extractors
+2025-08-20 10:14:13,396 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-20 10:14:13,415 - __main__ - INFO - Initializing pipeline components
+2025-08-20 10:14:13,442 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-20 10:14:13,446 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-20 10:14:19,575 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-20 10:14:19,578 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-20 10:14:19,578 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-20 10:14:19,580 - __main__ - INFO - Starting document ingestion from: C:\Users\lavanya.e\Downloads\mydocs
+2025-08-20 10:14:19,583 - __main__ - INFO - Processing document: Domestic Travel Policy.pdf
+2025-08-20 10:14:25,493 - __main__ - INFO - Ingested Domestic Travel Policy.pdf successfully
+2025-08-20 10:14:25,505 - __main__ - INFO - Processing document: Extended Work Hours - Policy.docx
+2025-08-20 10:14:26,042 - __main__ - INFO - Ingested Extended Work Hours - Policy.docx successfully
+2025-08-20 10:14:26,045 - __main__ - INFO - Processing document: Information Security Policy.pdf
+2025-08-20 10:14:28,427 - __main__ - INFO - Ingested Information Security Policy.pdf successfully
+2025-08-20 10:14:28,429 - __main__ - INFO - Processing document: International Travel Policy.pdf
+2025-08-20 10:14:32,463 - __main__ - INFO - Ingested International Travel Policy.pdf successfully
+2025-08-20 10:14:32,465 - __main__ - INFO - Processing document: Sexual Harassment Prevention Policy.pdf
+2025-08-20 10:14:36,673 - __main__ - INFO - Ingested Sexual Harassment Prevention Policy.pdf successfully
+2025-08-20 10:14:36,679 - __main__ - INFO - Document ingestion complete. Success: 5, Skipped: 0
+2025-08-20 10:14:37,234 - __main__ - INFO - Console cleared, starting chat loop
+2025-08-20 10:14:37,234 - __main__ - INFO - Entering chat loop
+2025-08-20 10:14:37,236 - __main__ - INFO - Chat session started: 20250820_101437
+2025-08-20 10:15:58,605 - __main__ - INFO - User query: 'tell me about domestic travel policy ?'
+2025-08-20 10:26:23,318 - __main__ - INFO - Generated response length: 4694 characters
+2025-08-20 10:32:37,312 - __main__ - WARNING - Chat interrupted by user (Ctrl+C)
+2025-08-20 10:32:37,326 - __main__ - INFO - Chat session ended
+2025-08-20 10:32:37,326 - __main__ - INFO - RAG Pipeline shutdown complete

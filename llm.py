@@ -1,19 +1,52 @@
-# llm.py
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
+from config import Config
+from google import genai
 
-class LocalLLM:
-    """Interface to any local LLM, using Hugging Face + PyTorch"""
-    def __init__(self, model_name_or_path: str, device: str = None):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
-            torch_dtype=torch.float16 if "cuda" in self.device else torch.float32,
-            device_map="auto" if "cuda" in self.device else None
+# -----------------------------
+# Gemini AI Client (adapted for RAG)
+# -----------------------------
+class GeminiAIClient:
+    def __init__(self, model: str = "gemini-2.5-flash"):
+        self.client = genai.Client(api_key=Config.GEMINI_API_KEY)
+        self.model = model
+
+    def generate_answer(self, query: str, chunks: list, prompt_template: str = None) -> str:
+        """
+        Generate an answer using query + retrieved chunks (RAG style).
+        """
+        if not prompt_template:
+            prompt_template = (
+                "You are a helpful assistant. "
+                "Use the following context to answer the query.\n\n"
+                "Context:\n{context}\n\n"
+                "Query: {query}\n\n"
+                "Answer in a clear, concise way. "
+                "If the answer is not in the context, say you don't know."
+            )
+
+        # Join all retrieved chunks into one context string
+        context = "\n".join(chunks)
+
+        # Build final prompt
+        prompt = prompt_template.format(query=query, context=context)
+
+        # Call Gemini model
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=prompt
         )
+        return response.text
 
-    def generate(self, prompt: str, max_new_tokens: int = 256) -> str:
-        inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-        outputs = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
-        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+# -----------------------------
+# AI Answer Service
+# -----------------------------
+class AIAnswerService:
+    def __init__(self, ai_client):
+        self.ai_client = ai_client
+
+    def get_answer(self, query: str, chunks: list) -> dict:
+        try:
+            answer = self.ai_client.generate_answer(query, chunks)
+            return {"answer": answer}
+        except Exception as e:
+            return {"error": f"AI answer generation failed: {e}"}

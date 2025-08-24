@@ -1,4 +1,3 @@
-# chatbot.py
 from typing import List
 from rag import RAGPipeline
 
@@ -12,6 +11,7 @@ class Chatbot:
                keywords: List[str] = None, max_new_tokens: int = 256) -> str:
         # 1. Retrieve relevant chunks
         chunks = self.rag.retrieve(query, top_k=top_k, similarity_threshold=similarity_threshold, keywords=keywords)
+        print(f"Retrieved {len(chunks)} relevant chunks for query: '{query}'\nChunks: {chunks}")
         if not chunks:
             return "❌ Sorry, no relevant information found."
 

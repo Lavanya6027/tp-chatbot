@@ -1,0 +1,12 @@
+2025-08-19 18:44:01,620 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-19 18:44:01,622 - __main__ - INFO - Registering document extractors
+2025-08-19 18:44:01,622 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-19 18:44:01,622 - __main__ - INFO - Initializing pipeline components
+2025-08-19 18:44:01,629 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-19 18:44:01,629 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:44:05,449 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-08-19 18:44:27,808 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-19 18:44:27,810 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-19 18:44:27,810 - __main__ - INFO - LLM and Chatbot initialized successfully
+2025-08-19 18:44:27,810 - __main__ - INFO - Starting document ingestion from: C:\Users\shenile.a\Downloads\my_docs
+2025-08-19 18:44:27,810 - __main__ - ERROR - Documents folder not found: C:\Users\shenile.a\Downloads\my_docs

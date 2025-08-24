@@ -1,0 +1,9 @@
+2025-08-21 18:02:59,976 - __main__ - INFO - Starting RAG Pipeline Initialization
+2025-08-21 18:02:59,976 - __main__ - INFO - Registering document extractors
+2025-08-21 18:02:59,976 - __main__ - INFO - Extractors registered: PDF, DOCX, TXT
+2025-08-21 18:02:59,976 - __main__ - INFO - Initializing pipeline components
+2025-08-21 18:02:59,983 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-08-21 18:02:59,983 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-21 18:03:08,635 - __main__ - INFO - RAG pipeline components initialized successfully
+2025-08-21 18:03:08,635 - __main__ - INFO - Initializing LLM and Chatbot
+2025-08-21 18:03:08,647 - __main__ - ERROR - Failed to initialize LLM/Chatbot: name 'LocalLLM' is not defined
