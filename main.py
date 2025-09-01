@@ -23,13 +23,9 @@ def setup_logging():
     
     # Configure logging
     logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler(log_file),
-            logging.StreamHandler()  # Also output to console
-        ]
-    )
+    level=logging.CRITICAL,  # Only critical errors will show (almost silent)
+    handlers=[]
+)
     
     return logging.getLogger(__name__)
 
@@ -55,7 +51,7 @@ try:
     rag = RAGPipeline(embedder, store, chunker, normalizer)
     gemini = GeminiAIClient()
     ai_service = AIAnswerService(gemini)
-    tg = TestGenerator(ai_service)
+    # tg = TestGenerator(ai_service)
     logger.info("RAG pipeline components initialized successfully")
 except Exception as e:
     logger.error(f"Failed to initialize RAG components: {e}")
@@ -95,17 +91,8 @@ for f in os.listdir(docs_folder):
     try:
         logger.info(f"Processing document: {f}")
         text = ExtractorDispatcher.extract(path)
-        q_map = tg.map_questions_to_chunks(text)
-
-        logger.info(f"Generated Q-map for {f}: {len(q_map)} chunks")
-        for qid, data in q_map.items():
-            print("\n--- Chunk ---")
-            print(data["chunk"][:200], "...")
-            print("Questions:", data["questions"])
-            print("Paraphrased:", data["alt_questions"])
-        logger.debug(f"Extracted text length: {len(text)} characters from {f}")
         
-        rag.add_document(text)
+        rag.add_document(text, source=f)
         doc_count += 1
         logger.info(f"Ingested {f} successfully")
         print(f"Ingested {f}")
@@ -117,7 +104,7 @@ for f in os.listdir(docs_folder):
 
 logger.info(f"Document ingestion complete. Success: {doc_count}, Skipped: {skipped_count}")
         
-clear_console()
+# clear_console()
 logger.info("Console cleared, starting chat loop")
 
 # Chat loop
@@ -138,7 +125,7 @@ while True:
         logger.debug("Retrieving relevant chunks from vector store")
         print("\nBot:")
 
-        chunks = rag.retrieve(q, top_k=5, similarity_threshold=0.5)
+        chunks = rag.retrieve(q, top_k=5)
         logger.info(f"Retrieved {len(chunks)} chunks: {chunks[:2]}")  # show first 2
 
         response = ai_service.get_answer(q, chunks)
@@ -149,7 +136,10 @@ while True:
         # logger.info(f"Generated response length: {len(response)} characters")
         # logger.debug(f"Response content: {response[:200]}...")  # First 200 chars
         
-        print(response)
+        if isinstance(response, dict) and "answer" in response:
+            print(response["answer"].strip())
+        else:
+            print(response)
         
     except KeyboardInterrupt:
         logger.warning("Chat interrupted by user (Ctrl+C)")

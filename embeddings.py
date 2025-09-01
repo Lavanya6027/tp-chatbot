@@ -29,11 +29,17 @@ class FAISSVectorStore(VectorStore):
     def __init__(self, embedding_dim: int):
         self.index = faiss.IndexFlatL2(embedding_dim)
         self.documents = []
+        self.metadatas = []  # ✅ add this
 
-    def add(self, embeddings: np.ndarray, documents: List[str]) -> None:
+    def add(self, embeddings: np.ndarray, documents: List[str], metadata: dict = None) -> None:
         self.index.add(embeddings)
         self.documents.extend(documents)
+        if metadata:
+            self.metadatas.extend([metadata] * len(documents))  # ✅ keep same length as documents
+        else:
+            self.metadatas.extend([{}] * len(documents))
 
-    def search(self, query_embedding: np.ndarray, top_k: int = 3) -> List[str]:
+    def search(self, query_embedding: np.ndarray, top_k: int = 3):
         distances, indices = self.index.search(query_embedding, top_k)
-        return [self.documents[i] for i in indices[0]]
+        return distances, indices
+
